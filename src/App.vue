@@ -1,19 +1,18 @@
 <template>
-  <div id="app">
+  <div>
     <img src="./assets/logo.png">
-    <VComponent></VComponent>
     <v-component></v-component>
-    <vapp></vapp>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
-  import VComponent from './components/v-component.vue'
+  import { default as vcomponent } from './components/v-component.vue'
 
   export default {
-    components () {
-      VComponent
+    name: 'app',
+    components: {
+      'v-component': vcomponent
     },
     data () {
       return {
